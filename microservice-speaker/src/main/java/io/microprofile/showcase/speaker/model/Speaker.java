@@ -14,9 +14,13 @@
 package io.microprofile.showcase.speaker.model;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.tomitribe.api.Model;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -28,6 +32,10 @@ import java.util.Map;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
+@Model
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Speaker implements Serializable {
 
     private static final long serialVersionUID = -8693770048623415961L;
